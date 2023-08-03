@@ -362,6 +362,8 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 
-# Drawi - ekral
+## Ignore files added by ekral
+
+# Drawio - ekral
 Diagrams/*.bkp
 Diagrams/*.dtmp
