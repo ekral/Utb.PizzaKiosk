@@ -6,9 +6,4 @@
         public required string Name { get; init; }
         public required string Description { get; init; }
     }
-
-    public class Pizza
-    {
-        public required string Name { get; init; }
-    }
 }
