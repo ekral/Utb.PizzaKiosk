@@ -21,21 +21,21 @@ We want the students to apply their knowledge and comprehension of course topics
 
 #### Comprehension
 
-•	The student explains the Model-View-ViewModel design pattern for creating a user interface.
-•	The student explains the concepts of object serialization and deserialization.
-•	The student explains how to access a relational database in code.
-•	The student explains the concept of object-relational mapping (ORM).
-•	The student explains how to call a web API on a client application.
-•	The student justifies the benefits of separating the code for creating the user interface from the actual application logic.
+-	The student explains the Model-View-ViewModel design pattern for creating a user interface.
+-	The student explains the concepts of object serialization and deserialization.
+-	The student explains how to access a relational database in code.
+-	The student explains the concept of object-relational mapping (ORM).
+-	The student explains how to call a web API on a client application.
+-	The student justifies the benefits of separating the code for creating the user interface from the actual application logic.
 
 #### Application
 
-•	The student applies the Model-View-ViewModel design pattern to the user interface design.
-•	The student defines the user interface independently of the application logic.
-•	The student serializes and deserializes objects.
-•	The student accesses relational database in code.
-•	The student uses an object-relational mapping (ORM) library.
-•	The student calls a web API on a client application.
+-	The student applies the Model-View-ViewModel design pattern to the user interface design.
+-	The student defines the user interface independently of the application logic.
+-	The student serializes and deserializes objects.
+-	The student accesses relational database in code.
+-	The student uses an object-relational mapping (ORM) library.
+-	The student calls a web API on a client application.
 
 
 ```mermaid
