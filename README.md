@@ -41,17 +41,17 @@ We want the students to apply their knowledge and comprehension of course topics
 
 Glossary
 
-- The customer is and individual or group that would like to customize and order a pizza
--	A kiosk is a hardware device with touch display for a new kiosk session for a customer.
--	A kiosk session is a personalized ordering experience. 
--	An order fulfillment option is a way in which the order is delivered and served.
--	A pizza is a dish that is in the pizzeria menu.
--	A pizza's selection is a set of options available for a specific kind of pizza.
--	A pizza’s option is a choice for a pizza including toppings, crust types, sauces, and other customizable features.
--	A pizza’s configuration is a set of options for a specific kind of pizza.
--	A pizza menu is a non-empty set of various types of pizza and their configurations.
--	A shopping cart is a multiset of pizzas and their configurations.
--	An order is a non-empty multiset containing duplicate of pizzas and their configurations from the shopping cart, and current state of the order.
+- A **customer** is and individual or group that would like to customize and order a pizza
+-	A **kiosk** is a hardware device with touch display for a new kiosk session for a customer.
+-	A **kiosk session** is a personalized ordering experience. 
+-	An **order fulfillment option** is a way in which the order is delivered and served.
+-	A **pizza** is a dish that is in the pizzeria menu.
+-	A **pizza's selection** is a list of unique options available for a specific kind of pizza.
+-	A **pizza’s option** is a choice for a pizza including toppings, crust types, sauces, and other customizable features.
+-	A **pizza’s configuration** is a list of options for a specific kind of pizza.
+-	A **pizza menu** is a non-empty list of unique various types of pizza and their configurations.
+-	A **shopping cart** is a list of pizzas and their configurations.
+-	An **order** is a non-empty list containing duplicate of pizzas and their configurations from the shopping cart, and current state of the order.
 
 
 ```mermaid
