@@ -16,8 +16,8 @@ We want the students to apply their knowledge and comprehension of course topics
 
 #### Knowledge
 
-•	The student lists client-side frameworks.
-•	The student lists backend frameworks.
+-	The student lists client-side frameworks.
+-	The student lists backend frameworks.
 
 #### Comprehension
 
