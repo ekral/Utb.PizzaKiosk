@@ -46,12 +46,12 @@ Glossary
 -	A **kiosk session** is a personalized ordering experience. 
 -	An **order fulfillment option** is a way in which the order is delivered and served.
 -	A **pizza** is a dish that is in the pizzeria menu.
--	A **pizza's selection** is a list of unique options available for a specific kind of pizza.
 -	A **pizza’s option** is a choice for a pizza including toppings, crust types, sauces, and other customizable features.
--	A **pizza’s configuration** is a list of options for a specific kind of pizza.
--	A **pizza menu** is a non-empty list of unique various types of pizza and their configurations.
--	A **shopping cart** is a list of pizzas and their configurations.
--	An **order** is a non-empty list containing duplicate of pizzas and their configurations from the shopping cart, and current state of the order.
+- A **pizza's selection** is a list of unique options available for a specific kind of pizza.
+-	A **pizza’s configuration** is a list of chosen options by the customer for a specific kind of pizza.
+-	A **pizza menu** is a distinct, non-empty list of various types of pizza and their configurations.
+-	A **shopping cart** is a list of pizzas and their configurations chosen by the customer.
+-	An **order** is a non-empty list containing duplicate of pizzas and their configurations from the shopping cart, along with the current state of the order.
 
 
 ```mermaid
