@@ -2,6 +2,9 @@
 Pizzeria Self-Service Kiosk - Student project for AP3AF and AK3AF courses
 
 ```mermaid
-classDiagram;
-  Animal <|-- Fish;
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
 ```
