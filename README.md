@@ -60,7 +60,37 @@ We want the students to apply their knowledge and comprehension of course topics
 
 ### User Requirements
 
+The customer
+
+- The **customer** wants to have the kiosk ready for them.
+- The **customer** wants to navigate through the menu easily to select their desired options.
+- The **customer** wants to specify the order fulfillment options and begin the new personalized kiosk session.
+- The **customer** wants to have the same menu during the kiosk session.
+- The **customer** wants to select the desired pizza from the pizza menu.
+- Then the **costumer** wants to add pizzas and their configurations to the cart.
+- Or the **costumer** wants to delete pizzas and their configuration from the cart.
+- The **customer** wants to delete non-empty multiset of pizza and its pizza’s configurations in the cart.
+- The **customer** wants to order non-empty multiset of pizza and its pizza’s configurations in the cart.
+- The **customer** wants to see the total order cost and receive a summary before placing the order. 
+
+The operator
+
+- The **operator** wants to see the list of non-empty multiset of orders ordered by date ascending.
+- The **operator** wants to complete the order.
+- The **operator** wants to cancel the order.
+
+The manager
+
+- The **manager** wants to create the pizza menu.
+- Then the **manager** wants to edit pizza menu.
+
+### Functional requirements
+
+TODO: Rewrite user requlements to describe it for developer.
+
 ### Data Requirements
+
+TODO: complete this.
 
 - A kiosk session: state:  state: ready, inuse, , Dine-in, takeout
 - The pizza: Name: PEPPERONI PIZZA, Description: tomato base shredded mozzarella
