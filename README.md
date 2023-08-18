@@ -6,7 +6,7 @@ Pizzeria Self-Service Kiosk - Student project for AP3AF and AK3AF courses.
 
 ### Audience
 
-The audience is the students who have studied basic programming and OOP courses, but not all of them have successfully passed these subjects. They are not expected to have experience with software projects.
+The audience is the students who have studied basic programming and OOP courses. Students are not expected to have experience with software projects.
 
 ### Goal
 
@@ -16,30 +16,30 @@ We want the students to apply their knowledge and comprehension of course topics
 
 #### Knowledge
 
--	The student lists client-side frameworks.
--	The student lists backend frameworks.
+-	The **student** lists client-side frameworks.
+-	The **student** lists backend frameworks.
 
 #### Comprehension
 
--	The student explains the Model-View-ViewModel design pattern for creating a user interface.
--	The student explains the concepts of object serialization and deserialization.
--	The student explains how to access a relational database in code.
--	The student explains the concept of object-relational mapping (ORM).
--	The student explains how to call a web API on a client application.
--	The student justifies the benefits of separating the code for creating the user interface from the actual application logic.
+-	The **student** explains the Model-View-ViewModel design pattern for creating a user interface.
+-	The **student** explains the concepts of object serialization and deserialization.
+-	The **student** explains how to access a relational database in code.
+-	The **student** explains the concept of object-relational mapping (ORM).
+-	The **student** explains how to call a web API on a client application.
+-	The **student** justifies the benefits of separating the code for creating the user interface from the actual application logic.
 
 #### Application
 
--	The student applies the Model-View-ViewModel design pattern to the user interface design.
--	The student defines the user interface independently of the application logic.
--	The student serializes and deserializes objects.
--	The student accesses relational database in code.
--	The student uses an object-relational mapping (ORM) library.
--	The student calls a web API on a client application.
+-	The **student** applies the Model-View-ViewModel design pattern to the user interface design.
+-	The **student** defines the user interface independently of the application logic.
+-	The **student** serializes and deserializes objects.
+-	The **student** accesses relational database in code.
+-	The **student** uses an object-relational mapping (ORM) library.
+-	The **student** calls a web API on a client application.
 
 ## Software Requirements
 
-Glossary
+### Glossary
 
 - A **customer** is and individual or group that would like to customize and order a pizza
 - A **kiosk** is a hardware device with touch display for a new kiosk session for a customer.
@@ -53,6 +53,7 @@ Glossary
 - A **shopping cart** is a list of pizzas and their configurations chosen by the customer.
 - An **order** is a non-empty list containing duplicate of pizzas and their configurations from the shopping cart, along with the current state of the order.
 
+### User Requiriments
 
 ```mermaid
  classDiagram
