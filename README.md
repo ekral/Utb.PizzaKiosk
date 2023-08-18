@@ -41,7 +41,6 @@ We want the students to apply their knowledge and comprehension of course topics
 
 ### Glossary
 
-- A **customer** is and individual or group that would like to customize and order a pizza
 - A **kiosk** is a hardware device with touch display for a new kiosk session for a customer.
 - A **kiosk session** is a personalized ordering experience for a customer. 
 - An **order fulfillment option** is a way in which the order is delivered and served to the customer.
@@ -53,7 +52,26 @@ We want the students to apply their knowledge and comprehension of course topics
 - A **shopping cart** is a list of pizzas and their configurations chosen by the customer.
 - An **order** is a non-empty list containing duplicate of pizzas and their configurations from the shopping cart, along with the current state of the order.
 
-### User Requiriments
+### Roles
+
+- A **customer** is and individual or group that would like to order and configure pizzas and eat it in the restaurant or take it away. 
+- An **operator** wants to periodically checks for orders and process orders. 
+- A **manager** wants to prepare pizza description and its configuration option for a customer. 
+
+### User Requirements
+
+### Data Requirements
+
+- A kiosk session: state:  state: ready, inuse, , Dine-in, takeout
+- The pizza: Name: PEPPERONI PIZZA, Description: tomato base shredded mozzarella
+
+### Architecture and Design
+
+- Model-View-ViewModel (MVVM) design pattern for user interface.
+- Web API with Object-relational mapping (ORM).
+- Separation of User Interface and Application Logic.
+
+#### Class diagrams
 
 ```mermaid
  classDiagram
