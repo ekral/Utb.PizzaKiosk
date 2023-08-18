@@ -90,6 +90,27 @@ TODO: Rewrite user requlements to describe it for developer.
 
 ### Non-Functional requirements.
 
+TODO: Decide where to put desktop application (maybe design). Check sentences in chatgpt.
+
+- Usability: The user interface should be intuitive and easy to navigate.
+- Localization: one language only, English or Czech.
+- Accessibility: application should support or in near future supports individuals with disabilities, adhering to accessibility guidelines.
+- Security: Access to operator and manager functionalities shall be secured through authentication and authorization.
+- Compatibility: Client-side Multiplatform applications (Windows, Linux, Mac).
+- Desktop application with touch support for a customer
+- Desktop application with touch support for an operator.
+- Desktop application for a manager.
+- Source code: Easy and readable code, essential code only.
+- Testing: The system shall support time simulation for testing purposes.
+
+### Constraints
+
+- Tests: Only one example of unit test to make project achievable in time.
+- Payment: No payment implementation, just order confirmation to make project easier.
+- Local database so that students do not need to setup server.
+- Web API for the backend pre-implemented by a teacher.
+- Latest standard .NET core
+
 ### Data Requirements
 
 TODO: complete this.
@@ -102,8 +123,9 @@ TODO: complete this.
 TODO: Rewrite as complete sentences.
 
 - Model-View-ViewModel (MVVM) design pattern for user interface.
-- Software uses the Web API that access local database using the Object-relational mapping (ORM).
+- Software uses the Web API that access local database (Sqlite) using the Object-relational mapping (ORM).
 - Separation of User Interface and Application Logic.
+- Time simulation for testing.
 
 #### Class diagrams
 
