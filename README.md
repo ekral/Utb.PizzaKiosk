@@ -88,6 +88,8 @@ The manager
 
 TODO: Rewrite user requlements to describe it for developer.
 
+### Non-Functional requirements.
+
 ### Data Requirements
 
 TODO: complete this.
@@ -97,11 +99,15 @@ TODO: complete this.
 
 ### Architecture and Design
 
+TODO: Rewrite as complete sentences.
+
 - Model-View-ViewModel (MVVM) design pattern for user interface.
-- Web API with Object-relational mapping (ORM).
+- Software uses the Web API that access local database using the Object-relational mapping (ORM).
 - Separation of User Interface and Application Logic.
 
 #### Class diagrams
+
+TODO: Create pizza kiosk classes.
 
 ```mermaid
  classDiagram
