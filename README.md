@@ -81,18 +81,18 @@ The customer
 **Context: Cart Interaction:**
 
 1. Adding Pizzas to Cart:
-- After configuring pizza’s configuration, the **costumer** wants to add pizzas and their configurations to the cart.
+   - After configuring pizza’s configuration, the **costumer** wants to add pizzas and their configurations to the cart.
 2. Removing Pizzas from Cart
-- Alternatively, if the costumer decides, they want to delete all pizzas and their configuration from the cart.
+   - Alternatively, if the costumer decides, they want to delete all pizzas and their configuration from the cart.
 
 **Context: Order**
 
 1. Placing an Order:
-- The **customer** wants to order pizza and its pizza’s configurations in the cart.
+   - The **customer** wants to order pizza and its pizza’s configurations in the cart.
 2. Reviewing Order and Cost:
-- After placing the order, the **customer** wants to see the total order cost and receive a summary before placing the final order.
+   - After placing the order, the **customer** wants to see the total order cost and receive a summary before placing the final order.
 3. Confirming Order:
-- After reviewing the order and its cost, the **customer** wants to confirm the order. 
+   - After reviewing the order and its cost, the **customer** wants to confirm the order. 
 
 The operator
 
