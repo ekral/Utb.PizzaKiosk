@@ -6,7 +6,7 @@ Pizzeria Self-Service Kiosk - Student project for AP3AF and AK3AF courses.
 
 ### Audience
 
-The audience is the students who have studied basic programming and OOP courses, but not all of them have successfully passed these subjects. They are not expected to have experience with software projects.
+The audience is the students who have studied basic programming and OOP courses. Students are not expected to have experience with software projects.
 
 ### Goal
 
