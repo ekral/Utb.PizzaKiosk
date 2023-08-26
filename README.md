@@ -55,8 +55,8 @@ We want the students to apply their knowledge and comprehension of course topics
 ### Roles
 
 - A **customer** is and individual or group that would like to order and configure pizzas and eat it in the restaurant or take it away. 
-- An **operator** wants to periodically checks for orders and process orders. 
-- A **manager** wants to prepare pizza description and its configuration option for a customer. 
+- An **operator** periodically checks for orders and process orders. 
+- A **manager** creates, edits, and manages pizza menu, including names, descriptions, options, and configuration. 
 
 ### User Requirements
 
