@@ -62,15 +62,28 @@ We want the students to apply their knowledge and comprehension of course topics
 
 The customer
 
-- The **customer** wants to have the kiosk ready for them.
+**Context: Kiosk Session:**
+
+1. Customer arriving at the kiosk:
+   - The **customer** wants to have the kiosk ready for them.
+2. Initialing a new session:
+   - The **customer** wants to specify the order fulfillment options and begin the new personalized kiosk session.
+
+**Context: Pizza selection and configuration:**
+
 - The **customer** wants to navigate through the menu easily to select their desired options.
-- The **customer** wants to specify the order fulfillment options and begin the new personalized kiosk session.
+
 - The **customer** wants to have the same menu during the kiosk session.
 - The **customer** wants to select the desired pizza from the pizza menu.
+
+**Context: Cart Interaction:**
 - Then the **costumer** wants to add pizzas and their configurations to the cart.
 - Or the **costumer** wants to delete pizzas and their configuration from the cart.
-- The **customer** wants to delete non-empty multiset of pizza and its pizza’s configurations in the cart.
-- The **customer** wants to order non-empty multiset of pizza and its pizza’s configurations in the cart.
+- The **customer** wants to delete pizza and its pizza’s configurations in the cart.
+- The **customer** wants to order pizza and its pizza’s configurations in the cart.
+
+**Context: Order Review**
+
 - The **customer** wants to see the total order cost and receive a summary before placing the order. 
 
 The operator
