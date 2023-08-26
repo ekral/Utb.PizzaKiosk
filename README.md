@@ -69,22 +69,30 @@ The customer
 2. Initialing a new session:
    - The **customer** wants to specify the order fulfillment options and begin the new personalized kiosk session.
 
-**Context: Pizza selection and configuration:**
+**Context: Pizza selection:**
+
 1. Selecting a Pizza:
    - The **customer** wants to navigate through the menu easily to select their desired options.
    - The **customer** wants to have the same menu during the kiosk session.
    - The **customer** wants to select the desired pizza from the pizza menu.
-   - After Selecting a pizza the **customer** wants to configure selected pizza’s configuration.
-   - 
+2. Pizza configuration
+   - After selecting a pizza the **customer** wants to configure selected pizza’s configuration.
+     
 **Context: Cart Interaction:**
-- Then the **costumer** wants to add pizzas and their configurations to the cart.
-- Or the **costumer** wants to delete pizzas and their configuration from the cart.
-- The **customer** wants to delete pizza and its pizza’s configurations in the cart.
+
+1. Adding Pizzas to Cart:
+- After configuring pizza’s configuration, the **costumer** wants to add pizzas and their configurations to the cart.
+2. Removing Pizzas from Cart
+- Alternatively, if the costumer decides, they want to delete all pizzas and their configuration from the cart.
+
+**Context: Order**
+
+1. Placing an Order:
 - The **customer** wants to order pizza and its pizza’s configurations in the cart.
-
-**Context: Order Review**
-
-- The **customer** wants to see the total order cost and receive a summary before placing the order. 
+2. Reviewing Order and Cost:
+- After placing the order, the **customer** wants to see the total order cost and receive a summary before placing the final order.
+3. Confirming Order:
+- After reviewing the order and its cost, the **customer** wants to confirm the order. 
 
 The operator
 
