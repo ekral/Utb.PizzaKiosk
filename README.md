@@ -76,7 +76,7 @@ The customer
    - The **customer** wants to have the same menu during the kiosk session.
    - The **customer** wants to select the desired pizza from the pizza menu.
 2. Pizza configuration
-   - After selecting a pizza the **customer** wants to configure selected pizza’s configuration.
+   - After selecting a pizza, the **customer** wants to configure selected pizza’s configuration.
      
 **Context: Cart Interaction:**
 
