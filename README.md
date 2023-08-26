@@ -41,7 +41,7 @@ We want the students to apply their knowledge and comprehension of course topics
 
 ### Glossary
 
-- A **kiosk** is a hardware device with touch display for a new kiosk session for a customer.
+- A **kiosk** is a hardware device with touch display that a customer uses for ordering a pizza.
 - A **kiosk session** is a personalized ordering experience for a customer. 
 - An **order fulfillment option** is a way in which the order is delivered and served to the customer.
 - A **pizza** is a dish that is in the pizzeria menu.
