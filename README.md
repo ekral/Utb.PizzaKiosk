@@ -70,12 +70,12 @@ The customer
    - The **customer** wants to specify the order fulfillment options and begin the new personalized kiosk session.
 
 **Context: Pizza selection and configuration:**
-
-- The **customer** wants to navigate through the menu easily to select their desired options.
-
-- The **customer** wants to have the same menu during the kiosk session.
-- The **customer** wants to select the desired pizza from the pizza menu.
-
+1. Selecting a Pizza:
+   - The **customer** wants to navigate through the menu easily to select their desired options.
+   - The **customer** wants to have the same menu during the kiosk session.
+   - The **customer** wants to select the desired pizza from the pizza menu.
+   - After Selecting a pizza the **customer** wants to configure selected pizza’s configuration.
+   - 
 **Context: Cart Interaction:**
 - Then the **costumer** wants to add pizzas and their configurations to the cart.
 - Or the **costumer** wants to delete pizzas and their configuration from the cart.
