@@ -83,7 +83,7 @@ The customer
 1. Adding Pizzas to Cart:
    - After configuring pizza’s configuration, the **costumer** wants to add pizzas and their configurations to the cart.
 2. Removing Pizzas from Cart
-   - Alternatively, if the costumer decides, they want to delete all pizzas and their configuration from the cart.
+   - Alternatively, if **the costumer** decides, they want to delete all pizzas and their configuration from the cart.
 
 **Context: Order**
 
