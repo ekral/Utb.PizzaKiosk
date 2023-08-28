@@ -56,7 +56,7 @@ We want the students to apply their knowledge and comprehension of course topics
 
 - A **customer** is an individual or group that would like to order and configure pizzas and eat it in the restaurant or take it away. 
 - An **operator** periodically checks for orders and process orders. 
-- A **manager** prepares pizza menu for costumers. 
+- A **manager** prepares pizza menu for costomers. 
 
 ### User Requirements
 
@@ -81,9 +81,9 @@ The customer
 **Context: Cart Interaction:**
 
 1. Adding Pizzas to Cart:
-   - After configuring pizza’s configuration, the **costumer** wants to add pizzas and their configurations to the cart.
+   - After configuring pizza’s configuration, the **costomer** wants to add pizzas and their configurations to the cart.
 2. Removing Pizzas from Cart
-   - Alternatively, if **the costumer** decides, they want to delete all pizzas and their configuration from the cart.
+   - Alternatively, if **the costomer** decides, they want to delete all pizzas and their configuration from the cart.
 
 **Context: Order**
 
