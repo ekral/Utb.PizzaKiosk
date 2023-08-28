@@ -93,7 +93,7 @@ The customer
    - After placing the order, the **customer** wants to see the total order cost and receive a summary before placing the final order.
 3. Confirming Order:
    - After reviewing the order and its cost, the **customer** can confirm the order.
-   - Or alternatively, the **customer** can can cancel the order, but still want to have pizzas in the cart and return to the pizza selection.
+   - Alternatively, the **customer** can cancel the order, but still wants to have pizzas in the cart and return to the pizza selection.
 
 The operator
 
