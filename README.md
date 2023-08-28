@@ -81,9 +81,9 @@ The customer
 **Context: Cart Interaction:**
 
 1. Adding Pizzas to Cart:
-   - After configuring pizza’s configuration, the **costomer** wants to add pizzas and their configurations to the cart.
+   - After configuring pizza’s configuration, the **customer** wants to add pizzas and their configurations to the cart.
 2. Removing Pizzas from Cart
-   - Alternatively, if **the costomer** decides, they want to delete all pizzas and their configuration from the cart.
+   - Alternatively, if **the customer** decides, they want to delete all pizzas and their configuration from the cart.
 
 **Context: Order**
 
@@ -92,15 +92,15 @@ The customer
 2. Reviewing Order and Cost:
    - After placing the order, the **customer** wants to see the total order cost and receive a summary before placing the final order.
 3. Confirming Order:
-   - After reviewing the order and its cost, the **customer** wants to confirm the order.
-   - Or alternatively, the customer can can cancel the order, but still want to have pizzas in the cart and return to selecting a pizza.
+   - After reviewing the order and its cost, the **customer** can confirm the order.
+   - Or alternatively, the **customer** can can cancel the order, but still want to have pizzas in the cart and return to the pizza selection.
 
 The operator
 
 **Context: Order processing:"
-- The **operator** wants to see the list of non-empty multiset of orders ordered by date ascending.
-- After reviewving the list of order, the operator can **operator** complete the order.
-- Or alternatively, the **operator** can cancel the order.
+   - The **operator** wants to see the list of non-empty multiset of orders ordered by date ascending.
+   - After reviewving the list of order, the operator can **operator** complete the order.
+   - Or alternatively, the **operator** can cancel the order.
 
 The manager
 
