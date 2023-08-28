@@ -60,7 +60,7 @@ We want the students to apply their knowledge and comprehension of course topics
 
 ### User Requirements
 
-The customer
+#### The customer
 
 **Context: Kiosk Session:**
 
@@ -95,21 +95,21 @@ The customer
    - After reviewing the order and its cost, the **customer** can confirm the order.
    - Alternatively, the **customer** can cancel the order, but still wants to have pizzas in the cart and return to the pizza selection.
 
-The operator
+#### The operator
 
 **Context: Order processing:**
    - The **operator** wants to see the list of non-empty multiset of orders ordered by date ascending.
    - After reviewing the list of order, the **operator** complete the order.
    - Or alternatively, the **operator** can cancel the order.
 
-The manager
+#### The manager
 
 **Context: Pizza Menu:**
 
 1. Preparing Menu:
    - The **manager** can create menu items, pizza descriptions, and configuration options.
-   - Alternatively, the manager can edit menu items to fix typos and errors.
-2. Archive Menu Item:
+   - Alternatively, the manager can make minor changes to items to correct typos and errors.
+2. Archiving Menu Item:
    - The **manager** can archive menu item to make it invisible to customers, but keeping it available for administrative purposes. 
 
 ### Functional requirements
