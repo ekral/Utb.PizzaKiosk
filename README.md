@@ -62,7 +62,7 @@ We want the students to apply their knowledge and comprehension of course topics
 
 The customer
 
-**Context: New Kiosk Session:**
+**Context: Kiosk Session:**
 
 1. Customer arriving at the kiosk:
    - The **customer** wants to have the kiosk ready for them.
