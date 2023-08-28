@@ -56,7 +56,7 @@ We want the students to apply their knowledge and comprehension of course topics
 
 - A **customer** is an individual or group that would like to order and configure pizzas and eat it in the restaurant or take it away. 
 - An **operator** periodically checks for orders and process orders. 
-- A **manager** creates, edits, and manages pizza menu, including names, descriptions, options, and configuration. 
+- A **manager** prepares pizza menu for costumers. 
 
 ### User Requirements
 
@@ -96,14 +96,20 @@ The customer
 
 The operator
 
+**Context: Order processing:"
 - The **operator** wants to see the list of non-empty multiset of orders ordered by date ascending.
-- The **operator** wants to complete the order.
-- The **operator** wants to cancel the order.
+- After reviewving the list of order, the operator can **operator** complete the order.
+- Or alternatively, the **operator** can cancel the order.
 
 The manager
 
-- The **manager** wants to create the pizza menu.
-- Then the **manager** wants to edit pizza menu.
+**Context: Pizza Menu:**
+
+1. Preparing Menu:
+   - The **manager** can create menu items, pizza descriptions, and configuration options.
+   - Alternatively, the manager can edit menu items to fix typos and errors.
+2. Archive Menu Item:
+   - The **manager** can archive menu item to make it invisible to customers, but keeping it available for administrative purposes. 
 
 ### Functional requirements
 
