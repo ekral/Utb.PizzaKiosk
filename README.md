@@ -97,9 +97,9 @@ The customer
 
 The operator
 
-**Context: Order processing:"
+**Context: Order processing:**
    - The **operator** wants to see the list of non-empty multiset of orders ordered by date ascending.
-   - After reviewving the list of order, the operator can **operator** complete the order.
+   - After reviewing the list of order, the **operator** complete the order.
    - Or alternatively, the **operator** can cancel the order.
 
 The manager
