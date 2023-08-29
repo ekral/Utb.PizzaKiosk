@@ -167,13 +167,13 @@ TODO: Rewrite as complete sentences.
    class Menu
    class ChosenItem
 
-   class CartItemStatus{
+   class CartStatus{
       <<enumeration>>
       InCart
       PendingCheckout
    }
 
-   class CartItem{
+   class Cart{
       +OrderId
    }
 
@@ -183,16 +183,18 @@ TODO: Rewrite as complete sentences.
       Takeout
       Delivery
    }
+
    class KioskSession
-   MenuItem "1" --> "1"  Pizza
-   Pizza "1" <-- "1"  ChosenItem
-   MenuItem "*" --> "*"  PizzaOption : selection options
-   PizzaOption "*" <-- "*" ChosenItem : configuration options {chosen or filled from the selection options}
+   MenuItem --> Pizza
+   Pizza <-- ChosenItem
+   MenuItem --> PizzaOption : selection options
+   PizzaOption <-- ChosenItem : configuration options {chosen or filled from the selection options}
    Menu --> MenuItem
    KioskSession --> Menu
    KioskSession --> FulfillmentOption
-   KioskSession "1" --> "1" ChosenItem : choosenItem
-   KioskSession "1" --> "*" CartItem : cart
+   KioskSession  --> ChosenItem
+   KioskSession  --> Cart
+   Cart --> ChosenItem
 ```
 
 ---
