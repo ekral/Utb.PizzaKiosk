@@ -191,8 +191,8 @@ TODO: Rewrite as complete sentences.
    Menu --> MenuItem
    KioskSession --> Menu
    KioskSession --> FulfillmentOption
-   KioskSession --> ChosenItem
-   KioskSession --> CartItem
+   KioskSession "1" --> "1" ChosenItem : choosenItem
+   KioskSession "1" --> "*" CartItem : cart
 ```
 
 ---
