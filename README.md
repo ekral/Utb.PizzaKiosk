@@ -165,7 +165,7 @@ TODO: Create pizza kiosk classes.
    %% direction LR
    class Pizza
    class CustomerSession
-   Pizza "0..1" --> "*" : pizza's option PizzaOption
+   Pizza "0..1" --> "*"  PizzaOption : pizza's option
    PizzaConfiguration "0..1" --> "*" PizzaOption
 ```
 
