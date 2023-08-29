@@ -177,7 +177,7 @@ TODO: Rewrite as complete sentences.
    MenuItem "1" --> "1"  Pizza
    Pizza "1" <-- "1"  CartItem
    MenuItem "*" --> "*"  PizzaOption : selection options
-   PizzaOption "*" <-- "*" CartItem : configuration options (chosen or filled from the selection options)
+   PizzaOption "*" <-- "*" CartItem : configuration options {chosen or filled from the selection options}
    Menu --> MenuItem
    Cart --> CartItem
    KioskSession --> Cart
