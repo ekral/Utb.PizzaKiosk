@@ -169,14 +169,20 @@ TODO: Create pizza kiosk classes.
    class CartItem
    class Cart
    class FulfillmentOption
-   class KioskSession
+   class KioskSession{
+      <<enumeration>>
+      DineIn
+      Takeout
+      Delivery
+   }
+
    MenuItem "1" --> "1"  Pizza
    Pizza "1" <-- "1"  CartItem
    MenuItem "*" --> "*"  PizzaOption : pizza's selection
    PizzaOption "*" <-- "*" CartItem : pizza's configuration
    Cart --> CartItem
    KioskSession --> Cart
-   KioskSession --> FullfilmentOption
+   KioskSession --> FulfillmentOption
    
 ```
 
