@@ -167,6 +167,7 @@ TODO: Rewrite as complete sentences.
    class Menu
    class CartItem
    class Cart
+   note for CartItem "{configuration options are chosen or filled from the selection options}"
    class FulfillmentOption{
       <<enumeration>>
       DineIn
@@ -180,7 +181,6 @@ TODO: Rewrite as complete sentences.
    PizzaOption "*" <-- "*" CartItem : configuration options
    Menu --> MenuItem
    Cart --> CartItem
-   note for CartItem "{configuration options are chosen or filled from the selection options}"
    KioskSession --> Cart
    KioskSession --> FulfillmentOption
    KioskSession --> Menu
