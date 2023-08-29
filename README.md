@@ -167,6 +167,7 @@ TODO: Create pizza kiosk classes.
    class Pizza
    class SelectedPizza
    Pizza "0..1" --> "*"  PizzaOption : pizza's selection
+   SelectedPizza "*" --> "1"  Pizza
    SelectedPizza "0..1" --> "*"  PizzaOption : pizza's configuration
 ```
 
