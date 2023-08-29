@@ -195,6 +195,7 @@ TODO: Rewrite as complete sentences.
    KioskSession  --> ChosenItem
    KioskSession  --> Cart
    Cart --> ChosenItem
+   Cart --> CartStatus : status
 ```
 
 ---
