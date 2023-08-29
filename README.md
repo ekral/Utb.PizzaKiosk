@@ -211,8 +211,8 @@ TODO: Rewrite as complete sentences.
    KioskSession  --> ChosenItem
    KioskSession  --> Cart
    KioskSession  --> Order
-   Cart --> ChosenItem : <<copy>
-   Order --> ChosenItem : <<copy>
+   Cart --> ChosenItem : ~copy~
+   Order --> ChosenItem : ~copy~
 ```
 
 ---
