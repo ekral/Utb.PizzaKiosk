@@ -163,10 +163,11 @@ TODO: Create pizza kiosk classes.
  classDiagram
    note "If ID = 0, it means ID is not set and will be computed later"
    %% direction LR
+   class PizzaOption
    class Pizza
-   class CustomerSession
-   Pizza "0..1" --> "*"  PizzaOption : pizza's option
-   PizzaConfiguration "0..1" --> "*" PizzaOption
+   class SelectedPizza
+   Pizza "0..1" --> "*"  PizzaOption : pizza's selection
+   SelectedPizza "0..1" --> "*"  PizzaOption : pizza's configuration
 ```
 
 ---
