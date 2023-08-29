@@ -161,7 +161,8 @@ TODO: Create pizza kiosk classes.
 
 ```mermaid
  classDiagram
-      PizzaOption "1" --> "*" PizzaSelection : +PizzaOption
+   direction RL
+   PizzaOption "*" --> "1" PizzaSelection : +PizzaOption
 ```
 
 ---
