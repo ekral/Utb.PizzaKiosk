@@ -175,6 +175,7 @@ TODO: Rewrite as complete sentences.
 
    class Cart{
       +OrderId
+      +CartStatus Status
    }
 
    class FulfillmentOption{
@@ -195,7 +196,6 @@ TODO: Rewrite as complete sentences.
    KioskSession  --> ChosenItem
    KioskSession  --> Cart
    Cart --> ChosenItem
-   Cart --> CartStatus : status
 ```
 
 ---
