@@ -167,15 +167,28 @@ TODO: Rewrite as complete sentences.
    class Menu
    class ChosenItem
 
-   class CartStatus{
+   class CartStatusType{
       <<enumeration>>
       InCart
       PendingCheckout
    }
 
    class Cart{
+      +Status : CartStatusType
+   }
+
+   class OrderStatusType{
+      <<enumeration>>
+      Pending
+      Processing
+      Ready
+      Delivered
+      Cancelled
+   }
+
+   class OrderItem{
       +OrderId
-      +Status : CartStatus
+      +Status : CartStatusType
    }
 
    class FulfillmentOptionType{
