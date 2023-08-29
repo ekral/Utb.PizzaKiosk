@@ -176,10 +176,11 @@ TODO: Rewrite as complete sentences.
    class KioskSession
    MenuItem "1" --> "1"  Pizza
    Pizza "1" <-- "1"  CartItem
-   MenuItem "*" --> "*"  PizzaOption : pizza's selection
-   PizzaOption "*" <-- "*" CartItem : pizza's configuration
+   MenuItem "*" --> "*"  PizzaOption : selection options
+   PizzaOption "*" <-- "*" CartItem : configuration options
    Menu --> MenuItem
    Cart --> CartItem
+   note for CartItem "{configuration options are chosen or filled from the selection options}"
    KioskSession --> Cart
    KioskSession --> FulfillmentOption
    KioskSession --> Menu
