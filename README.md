@@ -168,9 +168,9 @@ TODO: Create pizza kiosk classes.
    class MenuItem
    class CartItem
    MenuItem "1" --> "1"  Pizza
-   CartItem "1" --> "1"  Pizza
+   Pizza "1" <-- "1"  CartItem
    MenuItem "*" --> "*"  PizzaOption : pizza's selection
-   CartItem "*" --> "*"  PizzaOption : pizza's configuration
+   PizzaOption "*" --> "*" CartItem : pizza's configuration
 ```
 
 ---
