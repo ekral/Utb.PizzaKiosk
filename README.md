@@ -189,7 +189,7 @@ TODO: Rewrite as complete sentences.
    class Order{
       +OrderId
       +Status : OrderStatusType
-      +Items: List~ConfiguredItem~ 
+      +Items: List~ConfiguredItem~ {DeepCopy}
    }
 
    class FulfillmentOptionType{
