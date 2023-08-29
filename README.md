@@ -175,6 +175,7 @@ TODO: Rewrite as complete sentences.
 
    class Cart{
       +Status : CartStatusType
+      N1: {readOnly} +Items: List~configuredItem~
    }
 
    class OrderStatusType{
