@@ -189,7 +189,7 @@ TODO: Rewrite as complete sentences.
    class Order{
       +OrderId
       +Status : OrderStatusType
-       <<copy>> +Items: List~ConfiguredItem~
+       << copy >> +Items: List~ConfiguredItem~
    }
 
    class FulfillmentOptionType{
