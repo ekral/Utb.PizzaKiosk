@@ -186,9 +186,9 @@ TODO: Rewrite as complete sentences.
       Cancelled
    }
 
-   class OrderItem{
+   class Order{
       +OrderId
-      +Status : CartStatusType
+      +Status : OrderStatusType
    }
 
    class FulfillmentOptionType{
@@ -210,7 +210,9 @@ TODO: Rewrite as complete sentences.
    KioskSession --> Menu
    KioskSession  --> ChosenItem
    KioskSession  --> Cart
-   Cart --> ChosenItem
+   KioskSession  --> Order
+   Cart --> ChosenItem : <<copy>
+   Order --> ChosenItem : <<copy>
 ```
 
 ---
