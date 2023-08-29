@@ -165,9 +165,12 @@ TODO: Create pizza kiosk classes.
    %% direction LR
    class PizzaOption
    class Pizza
-   class SelectedPizza
-   Pizza "0..1" --> "*"  PizzaOption : pizza's selection
-   SelectedPizza "*" --> "1"  Pizza
+   class MenuItem
+   class CartItem
+   MenuItem "0..1" --> "*"  Pizza
+   MenuItem "0..1" --> "*"  PizzaOption : pizza's selection
+   CartItem "*" --> "1"  Pizza : pizza's configuration
+   CartItem "*" --> "1"  Pizza
    SelectedPizza "0..1" --> "*"  PizzaOption : pizza's configuration
 ```
 
