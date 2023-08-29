@@ -165,7 +165,7 @@ TODO: Rewrite as complete sentences.
    class Pizza
    class MenuItem
    class Menu
-   class ChosenAndConfiguredItem
+   class ChosenItem
    class CartItem
    class OrderItem
    class Cart
@@ -179,9 +179,10 @@ TODO: Rewrite as complete sentences.
    MenuItem "1" --> "1"  Pizza
    Pizza "1" <-- "1"  CartItem
    MenuItem "*" --> "*"  PizzaOption : selection options
-   PizzaOption "*" <-- "*" ChosenAndConfiguredItem : configuration options {chosen or filled from the selection options}
+   PizzaOption "*" <-- "*" ChosenItem : configuration options {chosen or filled from the selection options}
    Menu --> MenuItem
-   Cart --> CartItem
+   Cart --> ChosenItem
+   KioskSession --> ChosenItem
    KioskSession --> Cart
    KioskSession --> FulfillmentOption
    KioskSession --> Menu
