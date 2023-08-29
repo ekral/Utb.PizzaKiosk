@@ -162,8 +162,9 @@ TODO: Create pizza kiosk classes.
 ```mermaid
  classDiagram
    note "If ID = 0, it means ID is not set and will be computed later"
-   direction LR
+   %% direction LR
    PizzaSelection "0..1" --> "0..*" PizzaOption
+   PizzaConfiguration "0..1" --> "0..*" PizzaOption
 ```
 
 ---
