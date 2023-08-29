@@ -178,21 +178,23 @@ TODO: Rewrite as complete sentences.
       +Status : CartStatus
    }
 
-   class FulfillmentOption{
+   class FulfillmentOptionType{
       <<enumeration>>
       DineIn
       Takeout
       Delivery
    }
 
-   class KioskSession
+   class KioskSession{
+      +FulfillmentOption : FulfillmentOptionType
+   }
+
    MenuItem --> Pizza
    Pizza <-- ChosenItem
    MenuItem --> PizzaOption : selection options
    PizzaOption <-- ChosenItem : configuration options {chosen or filled from the selection options}
    Menu --> MenuItem
    KioskSession --> Menu
-   KioskSession --> FulfillmentOption
    KioskSession  --> ChosenItem
    KioskSession  --> Cart
    Cart --> ChosenItem
