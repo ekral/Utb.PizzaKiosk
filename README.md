@@ -228,17 +228,17 @@ classDiagram
       +Description : string
    }
 
-   PizzaSelection --> Pizza
-   Pizza <-- PizzaConfiguration
-   PizzaSelection --> PizzaOption
-   PizzaOption <-- PizzaConfiguration
+   PizzaSelection "1" --> "1" Pizza
+   Pizza "1" <-- "1" PizzaConfiguration
+   PizzaSelection "*" --> "*" PizzaOption
+   PizzaOption "*" <-- "*" PizzaConfiguration
    Menu "1"--> "*" PizzaSelection
-   KioskSession --> Menu
-   KioskSession  --> PizzaConfiguration
-   KioskSession  --> ShopingCart
-   KioskSession  --> Order
-   ShopingCart --> PizzaConfiguration
-   Order --> PizzaConfiguration
+   KioskSession "1" --> "1" Menu
+   KioskSession "1" --> "1" PizzaConfiguration
+   KioskSession "1" --> "1" ShopingCart
+   KioskSession  "1" -->  "1" Order
+   ShopingCart "1" --> "*" PizzaConfiguration
+   Order "1" --> "*" PizzaConfiguration
 ```
 
 ---
