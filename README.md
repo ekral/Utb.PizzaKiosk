@@ -165,6 +165,8 @@ TODO: Rewrite as complete sentences.
    class Pizza
    class MenuItem
    class Menu
+
+   note for ConfiguredItem "Configuration options are chossen or filled from the selection option"
    class ConfiguredItem
 
    class CartStatusType{
@@ -187,6 +189,8 @@ TODO: Rewrite as complete sentences.
       Cancelled
    }
 
+   note for Order "Items are deep copy of Cart Items"
+
    class Order{
       +OrderId
       +Status : OrderStatusType
@@ -207,7 +211,7 @@ TODO: Rewrite as complete sentences.
    MenuItem --> Pizza
    Pizza <-- ConfiguredItem
    MenuItem --> PizzaOption : selection options
-   PizzaOption <-- ConfiguredItem : configuration options {chosen or filled from the selection options}
+   PizzaOption <-- ConfiguredItem : configuration options
    Menu --> MenuItem
    KioskSession --> Menu
    KioskSession  --> ConfiguredItem
