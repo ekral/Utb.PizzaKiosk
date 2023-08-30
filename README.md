@@ -175,7 +175,7 @@ TODO: Rewrite as complete sentences.
 
    class Cart{
       +Status : CartStatusType
-      << copy >> +Items: List~configuredItem~
+      +Items: List~configuredItem~
    }
 
    class OrderStatusType{
@@ -190,7 +190,7 @@ TODO: Rewrite as complete sentences.
    class Order{
       +OrderId
       +Status : OrderStatusType
-       << copy >> +Items: List~ConfiguredItem~
+      +Items: List~ConfiguredItem~
    }
 
    class FulfillmentOptionType{
