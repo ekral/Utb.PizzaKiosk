@@ -164,9 +164,11 @@ TODO: Rewrite as complete sentences.
    class PizzaOption
    class Pizza
    class MenuItem
-   class Menu
+   class Menu{
+      +Items: List~MenuItem~
+   }
 
-   note for ConfiguredItem "Configuration options are chossen or filled from the selection option"
+   note for ConfiguredItem "Configuration options are choosen or filled from the selection option"
    class ConfiguredItem
 
    class CartStatusType{
@@ -212,7 +214,7 @@ TODO: Rewrite as complete sentences.
    Pizza <-- ConfiguredItem
    MenuItem --> PizzaOption : selection options
    PizzaOption <-- ConfiguredItem : configuration options
-   Menu --> MenuItem
+   Menu "1"--> "1..*" MenuItem
    KioskSession --> Menu
    KioskSession  --> ConfiguredItem
    KioskSession  --> Cart
