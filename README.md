@@ -158,7 +158,9 @@ TODO: Rewrite as complete sentences.
 #### Class diagrams
 
 ```mermaid
- classDiagram
+classDiagram
+
+%% direction LR
 
    class OrderStatusType{
       <<enumeration>>
@@ -182,57 +184,74 @@ TODO: Rewrite as complete sentences.
       Delivery
    }
 
-   note "If ID = 0, it means ID is not set and will be computed later"
-   %% direction LR
-   class PizzaOption
-   class Pizza
-   class MenuItem{
-      +Pizza : Pizza
-      +SelectionOptions : List~PizzaOption~
-   }
-   
-   note for Menu "Menu won't be displayed if it has no menu items."
-   class Menu{
-      +Items: List~MenuItem~
+   class KioskSession{
+      +FulfillmentOption : FulfillmentOptionType
+      +Cart : ShopingCart
+      +SelectedPizza : PizzaConfiguration
+      +Menu : Menu
    }
 
-   note for ConfiguredPizza "Configuration options are choosen or filled from the MenuItem's selection options"
-   class ConfiguredPizza{
-      +Pizza : Pizza
-      +ConfigurationOptions: List~PizzaOption~
-   }
-
-   class Cart{
-      +Status : CartStatusType
-      +Items: List~configuredItem~
-   }
-
-   
    note for Order "Items are deep copy of Cart Items"
-
    class Order{
       +OrderId
       +Status : OrderStatusType
       +Items: List~ConfiguredItem~
    }
 
-
-
-   class KioskSession{
-      +FulfillmentOption : FulfillmentOptionType
+   class ShopingCart{
+      +Status : CartStatusType
+      +Items: List~configuredItem~
    }
 
-   MenuItem --> Pizza
-   Pizza <-- ConfiguredPizza
-   MenuItem --> PizzaOption
-   PizzaOption <-- ConfiguredPizza
-   Menu "1"--> "*" MenuItem
+   class PizzaOption{
+
+   }
+
+   note for PizzaConfiguration "Configuration options are choosen or filled from the MenuItem's selection options"
+   class PizzaConfiguration{
+      +Pizza : Pizza
+      +ConfigurationOptions: List~PizzaOption~
+   }
+
+   note for Menu "Menu won't be displayed if it has no menu items."
+   class Menu{
+      +Items: List~PizzaSelection~
+   }
+
+   class PizzaSelection{
+      +Pizza : Pizza
+      +SelectionOptions : List~PizzaOption~
+   }
+
+   class Pizza {
+      +Name : string
+      +Description : string
+   }
+
+
+
+
+   
+
+ 
+
+   
+
+
+
+   
+
+   PizzaSelection --> Pizza
+   Pizza <-- PizzaConfiguration
+   PizzaSelection --> PizzaOption
+   PizzaOption <-- PizzaConfiguration
+   Menu "1"--> "*" PizzaSelection
    KioskSession --> Menu
-   KioskSession  --> ConfiguredPizza
-   KioskSession  --> Cart
+   KioskSession  --> PizzaConfiguration
+   KioskSession  --> ShopingCart
    KioskSession  --> Order
-   Cart --> ConfiguredPizza
-   Order --> ConfiguredPizza
+   ShopingCart --> PizzaConfiguration
+   Order --> PizzaConfiguration
 ```
 
 ---
