@@ -191,7 +191,7 @@ classDiagram
       +SessionMenu : Menu
    }
 
-   note for Order "PizzaConfigurtion is deep copied from the KioskSession's SelectedPizza"
+   note for Order "PizzaConfiguration is deep copied from the KioskSession's SelectedPizza"
    class Order{
       +OrderId
       +Status : OrderStatusType
