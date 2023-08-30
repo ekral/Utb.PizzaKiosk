@@ -188,19 +188,19 @@ classDiagram
       +FulfillmentOption : FulfillmentOptionType
       +Cart : ShopingCart
       +SelectedPizza : PizzaConfiguration
-      +Menu : Menu
+      +SessionMenu : Menu
    }
 
-   note for Order "Items are deep copy of Cart Items"
+   note for Order "PizzaConfigurtion is deep copied from the KioskSession's SelectedPizza"
    class Order{
       +OrderId
       +Status : OrderStatusType
-      +Items: List~ConfiguredItem~
+      +OrderPizzas: List~PizzaConfiguration~
    }
 
    class ShopingCart{
       +Status : CartStatusType
-      +Items: List~configuredItem~
+      +CartPizzas: List~PizzaConfiguration~
    }
 
    class PizzaOption{
@@ -227,19 +227,6 @@ classDiagram
       +Name : string
       +Description : string
    }
-
-
-
-
-   
-
- 
-
-   
-
-
-
-   
 
    PizzaSelection --> Pizza
    Pizza <-- PizzaConfiguration
