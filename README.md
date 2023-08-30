@@ -159,28 +159,6 @@ TODO: Rewrite as complete sentences.
 
 ```mermaid
  classDiagram
-   note "If ID = 0, it means ID is not set and will be computed later"
-   %% direction LR
-   class PizzaOption
-   class Pizza
-   class MenuItem
-   class Menu{
-      +Items: List~MenuItem~
-   }
-
-   note for ConfiguredItem "Configuration options are choosen or filled from the selection option"
-   class ConfiguredItem
-
-   class CartStatusType{
-      <<enumeration>>
-      InCart
-      PendingCheckout
-   }
-
-   class Cart{
-      +Status : CartStatusType
-      +Items: List~configuredItem~
-   }
 
    class OrderStatusType{
       <<enumeration>>
@@ -191,12 +169,10 @@ TODO: Rewrite as complete sentences.
       Cancelled
    }
 
-   note for Order "Items are deep copy of Cart Items"
-
-   class Order{
-      +OrderId
-      +Status : OrderStatusType
-      +Items: List~ConfiguredItem~
+   class CartStatusType{
+      <<enumeration>>
+      InCart
+      PendingCheckout
    }
 
    class FulfillmentOptionType{
@@ -206,21 +182,57 @@ TODO: Rewrite as complete sentences.
       Delivery
    }
 
+   note "If ID = 0, it means ID is not set and will be computed later"
+   %% direction LR
+   class PizzaOption
+   class Pizza
+   class MenuItem{
+      +Pizza : Pizza
+      +SelectionOptions : List~PizzaOption~
+   }
+   
+   note for Menu "Menu won't be displayed if it has no menu items."
+   class Menu{
+      +Items: List~MenuItem~
+   }
+
+   note for ConfiguredPizza "Configuration options are choosen or filled from the MenuItem's selection options"
+   class ConfiguredPizza{
+      +Pizza : Pizza
+      +ConfigurationOptions: List~PizzaOption~
+   }
+
+   class Cart{
+      +Status : CartStatusType
+      +Items: List~configuredItem~
+   }
+
+   
+   note for Order "Items are deep copy of Cart Items"
+
+   class Order{
+      +OrderId
+      +Status : OrderStatusType
+      +Items: List~ConfiguredItem~
+   }
+
+
+
    class KioskSession{
       +FulfillmentOption : FulfillmentOptionType
    }
 
    MenuItem --> Pizza
-   Pizza <-- ConfiguredItem
-   MenuItem --> PizzaOption : selection options
-   PizzaOption <-- ConfiguredItem : configuration options
-   Menu "1"--> "1..*" MenuItem
+   Pizza <-- ConfiguredPizza
+   MenuItem --> PizzaOption
+   PizzaOption <-- ConfiguredPizza
+   Menu "1"--> "*" MenuItem
    KioskSession --> Menu
-   KioskSession  --> ConfiguredItem
+   KioskSession  --> ConfiguredPizza
    KioskSession  --> Cart
    KioskSession  --> Order
-   Cart --> ConfiguredItem
-   Order --> ConfiguredItem
+   Cart --> ConfiguredPizza
+   Order --> ConfiguredPizza
 ```
 
 ---
