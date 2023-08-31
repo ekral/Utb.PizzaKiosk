@@ -204,15 +204,23 @@ classDiagram
    }
 
    class PizzaOption{
-      <<DiscriminatedUnion>>
+      +Description: string
    }
 
    class BooleanPizzaOption {
 
    }
 
-   class ListPizzaOption{
+   class BooleanOptionValue{
+      +Value : bool
+   }
 
+   class ListPizzaOption{
+      +OptionList : List~string~
+   }
+
+   class ListOptionValue{
+      +Value : string
    }
 
    class NumericPizzaOption{
@@ -220,6 +228,7 @@ classDiagram
    }
 
    PizzaOption <|--BooleanPizzaOption
+   BooleanPizzaOption "1" --> "1" BooleanOptionValue
    PizzaOption <|--ListPizzaOption
    PizzaOption <|--NumericPizzaOption
 
