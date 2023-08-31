@@ -204,8 +204,24 @@ classDiagram
    }
 
    class PizzaOption{
+      <<DiscriminatedUnion>>
+   }
+
+   class BooleanPizzaOption {
 
    }
+
+   class ListPizzaOption{
+
+   }
+
+   class NumericPizzaOption{
+
+   }
+
+   PizzaOption <|--BooleanPizzaOption
+   PizzaOption <|--ListPizzaOption
+   PizzaOption <|--NumericPizzaOption
 
    note for PizzaConfiguration "Configuration options are choosen or filled from the MenuItem's selection options"
    class PizzaConfiguration{
