@@ -220,34 +220,23 @@ classDiagram
 
    class BooleanValue{
       +Value : bool
+      +Option : BoleanOption
    }
-
    
    class ListValue{
       +Value : List~string~
+      +Option : ListOption
    }
    
    class NumericValue{
       +Value : int
+      +Option : NumericOption
    }
 
    class ConfigurationValue{
       <<TaggedUnion>>
       IsDefault()
    }
-
-   PizzaOption <|--BooleanOption
-   PizzaOption <|--ListOption
-   PizzaOption <|--NumericOption
-
- 
-   ConfigurationValue <|--BooleanValue
-   ConfigurationValue <|--ListValue
-   ConfigurationValue <|--NumericValue
-
-   BooleanValue "1" --> "1" BooleanOption
-   ListValue "1" --> "1" ListOption
-   NumericValue "1" --> "1" NumericOption
 
    note for PizzaConfiguration "Configuration options are choosen or filled from the MenuItem's selection options"
    class PizzaConfiguration{
@@ -274,7 +263,6 @@ classDiagram
    Pizza "1" <-- "1" PizzaConfiguration
    PizzaSelection "*" --> "*" PizzaOption
    PizzaConfiguration --> ConfigurationValue
-   ConfigurationValue "*" <-- "*" PizzaConfiguration
    Menu "1"--> "*" PizzaSelection
    KioskSession "1" --> "1" Menu
    KioskSession "1" --> "1" PizzaConfiguration
@@ -282,6 +270,18 @@ classDiagram
    KioskSession  "1" -->  "1" Order
    ShopingCart "1" --> "*" PizzaConfiguration
    Order "1" --> "*" PizzaConfiguration
+
+   PizzaOption <|--BooleanOption
+   ConfigurationValue <|--BooleanValue
+   %%BooleanValue "1" --> "1" BooleanOption
+
+   PizzaOption <|--ListOption
+   ConfigurationValue <|--ListValue
+   %%ListValue "1" --> "1" ListOption
+
+   PizzaOption <|--NumericOption
+   ConfigurationValue <|--NumericValue
+   %%NumericValue "1" --> "1" NumericOption
 ```
 
 ---
