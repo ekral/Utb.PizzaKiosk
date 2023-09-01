@@ -160,7 +160,7 @@ TODO: Rewrite as complete sentences.
 ```mermaid
 classDiagram
 
-%% direction LR
+%% direction TD
 
    class OrderStatusType{
       <<enumeration>>
@@ -204,38 +204,57 @@ classDiagram
    }
 
    class PizzaOption{
+      <<TaggedUnion>>
       +Description: string
    }
 
-   class BooleanPizzaOption {
+   class BooleanOption {
 
    }
-
-   class BooleanOptionValue{
-      +Value : bool
-   }
-
-   class ListPizzaOption{
+   
+   class ListOption{
       +OptionList : List~string~
    }
 
-   class ListOptionValue{
-      +Value : string
-   }
-
-   class NumericPizzaOption{
+   class NumericOption{
 
    }
 
-   PizzaOption <|--BooleanPizzaOption
-   BooleanPizzaOption "1" --> "1" BooleanOptionValue
-   PizzaOption <|--ListPizzaOption
-   PizzaOption <|--NumericPizzaOption
+   class BooleanValue{
+      +Value : bool
+   }
+
+   
+   class ListValue{
+      +Value : List~string~
+   }
+   
+   class NumericValue{
+      +Value : int
+   }
+
+   class ConfigurationValue{
+      <<TaggedUnion>>
+      IsDefault()
+   }
+
+   PizzaOption <|--BooleanOption
+   PizzaOption <|--ListOption
+   PizzaOption <|--NumericOption
+
+ 
+   ConfigurationValue <|--BooleanValue
+   ConfigurationValue <|--ListValue
+   ConfigurationValue <|--NumericValue
+
+   BooleanValue "1" --> "1" BooleanOption
+   ListValue "1" --> "1" ListOption
+   NumericValue "1" --> "1" NumericOption
 
    note for PizzaConfiguration "Configuration options are choosen or filled from the MenuItem's selection options"
    class PizzaConfiguration{
       +Pizza : Pizza
-      +ConfigurationOptions: List~PizzaOption~
+      +ConfigurationValues: List~ConfigurationValue~
    }
 
    note for Menu "Menu won't be displayed if it has no menu items."
@@ -256,7 +275,7 @@ classDiagram
    PizzaSelection "1" --> "1" Pizza
    Pizza "1" <-- "1" PizzaConfiguration
    PizzaSelection "*" --> "*" PizzaOption
-   PizzaOption "*" <-- "*" PizzaConfiguration
+   ConfigurationValue "*" <-- "*" PizzaConfiguration
    Menu "1"--> "*" PizzaSelection
    KioskSession "1" --> "1" Menu
    KioskSession "1" --> "1" PizzaConfiguration
