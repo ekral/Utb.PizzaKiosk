@@ -189,16 +189,17 @@ classDiagram
       +SessionMenu : Menu
    }
 
-   note for Order "PizzaConfiguration is deep copied from the KioskSession's SelectedPizza"
+
    class Order{
       +OrderId
       +Status : OrderStatusType
-      +OrderPizzas: List~PizzaConfiguration~
+      << Immutable >> +OrderPizzas: List~PizzaConfiguration~
    }
 
+   note for ShopingCart "PizzaConfiguration is deep copied from the KioskSession's SelectedPizza"
    class ShopingCart{
       +Status : CartStatusType
-      +CartPizzas: List~PizzaConfiguration~
+      << Immutable >> +CartPizzas: List~PizzaConfiguration~
    }
 
    class PizzaOption{
@@ -238,7 +239,6 @@ classDiagram
       IsDefault()
    }
 
-   note for PizzaConfiguration "Configuration options are choosen or filled from the MenuItem's selection options"
    class PizzaConfiguration{
       +Pizza : Pizza
       +ConfigurationValues: List~ConfigurationValue~
