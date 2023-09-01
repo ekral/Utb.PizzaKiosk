@@ -160,8 +160,6 @@ TODO: Rewrite as complete sentences.
 ```mermaid
 classDiagram
 
-%% direction TD
-
    class OrderStatusType{
       <<enumeration>>
       Pending
@@ -275,6 +273,7 @@ classDiagram
    PizzaSelection "1" --> "1" Pizza
    Pizza "1" <-- "1" PizzaConfiguration
    PizzaSelection "*" --> "*" PizzaOption
+   PizzaConfiguration --> ConfigurationValue
    ConfigurationValue "*" <-- "*" PizzaConfiguration
    Menu "1"--> "*" PizzaSelection
    KioskSession "1" --> "1" Menu
