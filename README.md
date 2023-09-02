@@ -208,15 +208,16 @@ classDiagram
    }
 
    class BooleanOption {
-
+      +DefaultValue : int
    }
    
    class ListOption{
       +OptionList : List~string~
+      +DefaultValue : string
    }
 
    class NumericOption{
-
+      +DefaultValue : int
    }
 
    class BooleanValue{
