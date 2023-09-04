@@ -158,25 +158,7 @@ TODO: Rewrite as complete sentences.
 #### Class diagrams
 
 ```mermaid
- classDiagram
-   note "If ID = 0, it means ID is not set and will be computed later"
-   %% direction LR
-   class PizzaOption
-   class Pizza
-   class MenuItem
-   class Menu
-   class ConfiguredItem
-
-   class CartStatusType{
-      <<enumeration>>
-      InCart
-      PendingCheckout
-   }
-
-   class Cart{
-      +Status : CartStatusType
-      << copy >> +Items: List~configuredItem~
-   }
+classDiagram
 
    class OrderStatusType{
       <<enumeration>>
@@ -187,10 +169,10 @@ TODO: Rewrite as complete sentences.
       Cancelled
    }
 
-   class Order{
-      +OrderId
-      +Status : OrderStatusType
-       << copy >> +Items: List~ConfiguredItem~
+   class CartStatusType{
+      <<enumeration>>
+      InCart
+      PendingCheckout
    }
 
    class FulfillmentOptionType{
@@ -202,19 +184,105 @@ TODO: Rewrite as complete sentences.
 
    class KioskSession{
       +FulfillmentOption : FulfillmentOptionType
+      +Cart : ShopingCart
+      +SelectedPizza : PizzaConfiguration
+      +SessionMenu : Menu
    }
 
-   MenuItem --> Pizza
-   Pizza <-- ConfiguredItem
-   MenuItem --> PizzaOption : selection options
-   PizzaOption <-- ConfiguredItem : configuration options {chosen or filled from the selection options}
-   Menu --> MenuItem
-   KioskSession --> Menu
-   KioskSession  --> ConfiguredItem
-   KioskSession  --> Cart
-   KioskSession  --> Order
-   Cart --> ConfiguredItem
-   Order --> ConfiguredItem
+
+   class Order{
+      +OrderId
+      +Status : OrderStatusType
+      << Immutable >> +OrderPizzas: List~PizzaConfiguration~
+   }
+
+   note for ShopingCart "PizzaConfiguration is deep copied from the KioskSession's SelectedPizza"
+   class ShopingCart{
+      +Status : CartStatusType
+      << Immutable >> +CartPizzas: List~PizzaConfiguration~
+   }
+
+   class PizzaOption{
+      <<TaggedUnion>>
+      +Description: string
+   }
+
+   class BooleanOption {
+      +DefaultValue : int
+   }
+   
+   class ListOption{
+      +OptionList : List~string~
+      +DefaultValue : string
+   }
+
+   class NumericOption{
+      +DefaultValue : int
+   }
+
+   class BooleanValue{
+      +Value : bool
+      +Option : BoleanOption
+   }
+   
+   class ListValue{
+      +Value : List~string~
+      +Option : ListOption
+   }
+   
+   class NumericValue{
+      +Value : int
+      +Option : NumericOption
+   }
+
+   class ConfigurationValue{
+      <<TaggedUnion>>
+      IsDefault()
+   }
+
+   class PizzaConfiguration{
+      +Pizza : Pizza
+      +ConfigurationValues: List~ConfigurationValue~
+   }
+
+   note for Menu "Menu won't be displayed if it has no menu items."
+   class Menu{
+      +Items: List~PizzaSelection~
+   }
+
+   class PizzaSelection{
+      +Pizza : Pizza
+      +SelectionOptions : List~PizzaOption~
+   }
+
+   class Pizza {
+      +Name : string
+      +Description : string
+   }
+
+   PizzaSelection "1" --> "1" Pizza
+   Pizza "1" <-- "1" PizzaConfiguration
+   PizzaSelection "*" --> "*" PizzaOption
+   PizzaConfiguration --> ConfigurationValue
+   Menu "1"--> "*" PizzaSelection
+   KioskSession "1" --> "1" Menu
+   KioskSession "1" --> "1" PizzaConfiguration
+   KioskSession "1" --> "1" ShopingCart
+   KioskSession  "1" -->  "1" Order
+   ShopingCart "1" --> "*" PizzaConfiguration
+   Order "1" --> "*" PizzaConfiguration
+
+   PizzaOption <|--BooleanOption
+   ConfigurationValue <|--BooleanValue
+   %%BooleanValue "1" --> "1" BooleanOption
+
+   PizzaOption <|--ListOption
+   ConfigurationValue <|--ListValue
+   %%ListValue "1" --> "1" ListOption
+
+   PizzaOption <|--NumericOption
+   ConfigurationValue <|--NumericValue
+   %%NumericValue "1" --> "1" NumericOption
 ```
 
 ---
