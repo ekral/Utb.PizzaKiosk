@@ -32,42 +32,53 @@ namespace Utb.PizzaKiosk.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            PizzaOption pizzaOptionSize = new()
+            var options = new PizzaOption[]
             {
-                 Id = 1,
-                 PizzaOptionType = PizzaOptionType.StringSelection,
-                 PizzaOptionName = "Size",
-                 PizzaOptionDescription = "Pizza size selection"  
+                new PizzaOption()
+                {
+                     Id = 1,
+                     PizzaOptionType = PizzaOptionType.StringSelection,
+                     PizzaOptionName = "Size",
+                     PizzaOptionDescription = "Pizza size selection"
+                },
+                new PizzaOption()
+                {
+                    Id = 2,
+                    PizzaOptionType = PizzaOptionType.IntSelection,
+                    PizzaOptionName = "Pfefferoni",
+                    PizzaOptionDescription = "Number of Pfefferones"
+                },
+                new PizzaOption()
+                {
+                    Id = 3,
+                    PizzaOptionType = PizzaOptionType.BooleanSection,
+                    PizzaOptionName = "Additional Cheese",
+                    PizzaOptionDescription = "Extra chease (Yes, No)"
+                },
+                new PizzaOption()
+                {
+                    Id = 4,
+                    PizzaOptionType = PizzaOptionType.IntValue,
+                    PizzaOptionName = "ketchup militers",
+                    PizzaOptionDescription = "Extract volume of ketchup"
+                }
             };
 
-            PizzaOption pizzaOptionPfefferoni = new()
+            var optionValues = new PizzaOptionValue[]
             {
-                Id = 2,
-                PizzaOptionType = PizzaOptionType.IntSelection,
-                PizzaOptionName = "Pfefferoni",
-                PizzaOptionDescription = "Number of Pfefferones"
+                new PizzaOptionValue() { Id = 1, PizzaOptionId = 1, PizzaOptionValueName = "Small"},
+                new PizzaOptionValue() { Id = 2, PizzaOptionId = 1, PizzaOptionValueName = "Medium"},
+                new PizzaOptionValue() { Id = 3, PizzaOptionId = 1, PizzaOptionValueName = "Large"},
+                new PizzaOptionValue() { Id = 4, PizzaOptionId = 2, PizzaOptionValueName = "1"},
+                new PizzaOptionValue() { Id = 5, PizzaOptionId = 2, PizzaOptionValueName = "2"},
+                new PizzaOptionValue() { Id = 6, PizzaOptionId = 2, PizzaOptionValueName = "3"},
+                new PizzaOptionValue() { Id = 7, PizzaOptionId = 3, PizzaOptionValueName = "Yes"},
+                new PizzaOptionValue() { Id = 8, PizzaOptionId = 3, PizzaOptionValueName = "No"},
+                new PizzaOptionValue() { Id = 9, PizzaOptionId = 4, PizzaOptionValueName = "Volume"},
             };
 
-            PizzaOption pizzaOptionAdditionaCheese = new()
-            {
-                Id = 3,
-                PizzaOptionType = PizzaOptionType.BooleanSection,
-                PizzaOptionName = "Additional Cheese",
-                PizzaOptionDescription = "Extra chease (Yes, No)"
-            };
-
-            // Save to the generic column PizzaOrderOptionAdditionalInfo
-            PizzaOption pizzaOptionExactVolume = new()
-            {
-                Id = 4,
-                PizzaOptionType = PizzaOptionType.IntValue,
-                PizzaOptionName = "ketchup militers",
-                PizzaOptionDescription = "Extract volume of ketchup"
-            };
-
-            modelBuilder.Entity<PizzaOption>().HasData(pizzaOptionSize, pizzaOptionPfefferoni, pizzaOptionAdditionaCheese, pizzaOptionExactVolume);
-
-
+            modelBuilder.Entity<PizzaOption>().HasData(options);
+            modelBuilder.Entity<PizzaOptionValue>().HasData(optionValues);
         }
 
     }
