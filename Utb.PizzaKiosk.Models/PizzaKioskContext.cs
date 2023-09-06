@@ -12,9 +12,6 @@ namespace Utb.PizzaKiosk.Models
     public class PizzaKioskContext : DbContext
     {
         public DbSet<PizzaOption> PizzaOptions { get; set; } 
-        public DbSet<PizzaOptionValue> PizzaOptionValues { get; set; } 
-        public DbSet<PizzaOrder> PizzaOrder { get; set; } 
-        public DbSet<PizzaOrderOption> PizzaOrderOptions { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -34,12 +31,12 @@ namespace Utb.PizzaKiosk.Models
         {
             var options = new PizzaOption[]
             {
-                new PizzaOption()
+                new StringOptions()
                 {
                      Id = 1,
-                     PizzaOptionType = PizzaOptionType.StringSelection,
-                     PizzaOptionName = "Size",
-                     PizzaOptionDescription = "Pizza size selection"
+                     Description = "Pizza size",
+                     Options = new List<string>() { "Small", "Medium", "Large"},
+                     DefaultValue = "Medium"
                 },
                 new PizzaOption()
                 {
