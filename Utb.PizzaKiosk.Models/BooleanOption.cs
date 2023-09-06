@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Utb.PizzaKiosk.Models
 {
-    public class BooleanOption : PizzaOption
+    public class BooleanOption : PizzaConfigurationOption
     {
         public bool DefaultValue { get; set; }
         public bool IsDefault(bool value) => value == DefaultValue;

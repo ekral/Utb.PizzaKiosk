@@ -10,7 +10,7 @@ namespace Utb.PizzaKiosk.Models
     {
         public int StringOptionsId { get; set; }
 
-        public required StringOptions StringOptions { get; set; }
+        public StringOptions? StringOptions { get; set; }
 
         public required string SelectedString { get; set; }
     }

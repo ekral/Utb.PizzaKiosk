@@ -11,7 +11,7 @@ namespace Utb.PizzaKiosk.Models
 {
     public class PizzaKioskContext : DbContext
     {
-        public DbSet<PizzaOption> PizzaOptions { get; set; } 
+        public DbSet<PizzaConfigurationOption> PizzaOptions { get; set; } 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -29,33 +29,55 @@ namespace Utb.PizzaKiosk.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            var options = new PizzaOption[]
+            var option1 = new StringOptions()
             {
-                new StringOptions()
-                {
-                     Id = 1,
-                     Description = "Pizza size",
-                     Options = new List<string>() { "Small", "Medium", "Large"},
-                     DefaultValueIndex = 1
-                },
-                new BooleanOption()
-                {
-                     Id = 2,
-                     Description = "Garling",
-                     DefaultValue = true
-                },
-                new QuantityOption()
-                {
-                    Id = 3,
-                    Description = "Number of pfeferoni",
-                    MinimalValue = 0,
-                    MaximalValue = 10,
-                    DefaultValue = 1
-                }
+                PizzaConfigurationOptionId = 1,
+                Description = "Pizza size",
+                Options = new List<string>() { "Small", "Medium", "Large" },
+                DefaultValueIndex = 1
             };
 
-            
-        }
+            var option2 = new BooleanOption()
+            {
+                PizzaConfigurationOptionId = 2,
+                Description = "Garling",
+                DefaultValue = true
+            };
 
+            var option3 = new QuantityOption()
+            {
+                PizzaConfigurationOptionId = 3,
+                Description = "Number of pfeferoni",
+                MinimalValue = 0,
+                MaximalValue = 10,
+                DefaultValue = 1
+            };
+
+            var value1 = new StringValue()
+            {
+                Id = 1,
+                StringOptionsId = 1,
+                SelectedString = "Small"
+            };
+
+            var value2 = new BooleanValue()
+            {
+                Id = 2,
+                BooleanOptionId = 2,
+                IsSelected = true,
+            };
+
+            var value3 = new QuantityValue()
+            {
+                Id = 3,
+                QuantityOptionId = 3,
+                Quantity = 5,
+            };
+         
+
+            modelBuilder.Entity<PizzaConfigurationOption>().HasKey(so => so.PizzaConfigurationOptionId);
+            modelBuilder.Entity<StringOptions>().HasData(option1);
+
+        }
     }
 }

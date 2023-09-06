@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Utb.PizzaKiosk.Models
 {
-    public class QuantityOption : PizzaOption
+    public class QuantityOption : PizzaConfigurationOption
     {
         public required int DefaultValue { get; set; }
         public required int MinimalValue { get; set; }

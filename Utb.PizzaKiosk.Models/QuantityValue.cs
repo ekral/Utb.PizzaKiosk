@@ -9,7 +9,7 @@ namespace Utb.PizzaKiosk.Models
     public class QuantityValue : SelectedValue
     {
         public int QuantityOptionId { get; set; }
-        public required QuantityOption QuantityOption { get; set; }
+        public QuantityOption? QuantityOption { get; set; }
         public required int Quantity { get; set; }
     }
 }
