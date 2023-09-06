@@ -235,14 +235,14 @@ classDiagram
       +Option : NumericOption
    }
 
-   class ConfigurationValue{
+   class SelectedValue{
       <<TaggedUnion>>
       IsDefault()
    }
 
    class PizzaConfiguration{
       +Pizza : Pizza
-      +ConfigurationValues: List~ConfigurationValue~
+      +ConfigurationValues: List~SelectedValue~
    }
 
    note for Menu "Menu won't be displayed if it has no menu items."
@@ -263,7 +263,7 @@ classDiagram
    PizzaSelection "1" --> "1" Pizza
    Pizza "1" <-- "1" PizzaConfiguration
    PizzaSelection "*" --> "*" PizzaOption
-   PizzaConfiguration --> ConfigurationValue
+   PizzaConfiguration --> SelectedValue
    Menu "1"--> "*" PizzaSelection
    KioskSession "1" --> "1" Menu
    KioskSession "1" --> "1" PizzaConfiguration
@@ -273,15 +273,15 @@ classDiagram
    Order "1" --> "*" PizzaConfiguration
 
    PizzaOption <|--BooleanOption
-   ConfigurationValue <|--BooleanValue
+   SelectedValue <|--BooleanValue
    %%BooleanValue "1" --> "1" BooleanOption
 
    PizzaOption <|--ListOption
-   ConfigurationValue <|--ListValue
+   SelectedValue <|--ListValue
    %%ListValue "1" --> "1" ListOption
 
    PizzaOption <|--NumericOption
-   ConfigurationValue <|--NumericValue
+   SelectedValue <|--NumericValue
    %%NumericValue "1" --> "1" NumericOption
 ```
 
