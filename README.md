@@ -207,16 +207,18 @@ classDiagram
       +Description: string
    }
 
+    class StringOptions{
+      +Options : List~string~
+      +DefaultValueIndex : int
+   }
+
    class BooleanOption {
       +DefaultValue : int
    }
-   
-   class ListOption{
-      +OptionList : List~string~
-      +DefaultValue : string
-   }
 
-   class NumericOption{
+   class QuantityOption{
+      +MinimalValue : int
+      +MaximalValue : int
       +DefaultValue : int
    }
 
@@ -224,6 +226,7 @@ classDiagram
       +Value : bool
       +Option : BoleanOption
    }
+
    
    class ListValue{
       +Value : List~string~
@@ -272,17 +275,17 @@ classDiagram
    ShopingCart "1" --> "*" PizzaConfiguration
    Order "1" --> "*" PizzaConfiguration
 
+   PizzaOption <|--StringOptions
+   SelectedValue <|--ListValue
+   %%ListValue "1" --> "1" StringOptions
+
    PizzaOption <|--BooleanOption
    SelectedValue <|--BooleanValue
    %%BooleanValue "1" --> "1" BooleanOption
 
-   PizzaOption <|--ListOption
-   SelectedValue <|--ListValue
-   %%ListValue "1" --> "1" ListOption
-
-   PizzaOption <|--NumericOption
+   PizzaOption <|--QuantityOption
    SelectedValue <|--NumericValue
-   %%NumericValue "1" --> "1" NumericOption
+   %%NumericValue "1" --> "1" QuantityOption
 ```
 
 ---
