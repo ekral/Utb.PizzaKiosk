@@ -8,7 +8,9 @@ namespace Utb.PizzaKiosk.Models
 {
     class QuantityOption : PizzaOption
     {
-        public int Quantity { get; set; }
-        public int DefaultValue { get; set; }
+        public required int DefaultValue { get; set; }
+        public required int MinimalValue { get; set; }
+        public required int MaximalValue { get; set; }
+
     }
 }

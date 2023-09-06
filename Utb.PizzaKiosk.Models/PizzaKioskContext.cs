@@ -36,46 +36,25 @@ namespace Utb.PizzaKiosk.Models
                      Id = 1,
                      Description = "Pizza size",
                      Options = new List<string>() { "Small", "Medium", "Large"},
-                     DefaultValue = "Medium"
+                     DefaultValueIndex = 1
                 },
-                new PizzaOption()
+                new BooleanOption()
                 {
-                    Id = 2,
-                    PizzaOptionType = PizzaOptionType.IntSelection,
-                    PizzaOptionName = "Pfefferoni",
-                    PizzaOptionDescription = "Number of Pfefferones"
+                     Id = 2,
+                     Description = "Garling",
+                     DefaultValue = true
                 },
-                new PizzaOption()
+                new QuantityOption()
                 {
                     Id = 3,
-                    PizzaOptionType = PizzaOptionType.BooleanSection,
-                    PizzaOptionName = "Additional Cheese",
-                    PizzaOptionDescription = "Extra chease (Yes, No)"
-                },
-                new PizzaOption()
-                {
-                    Id = 4,
-                    PizzaOptionType = PizzaOptionType.IntValue,
-                    PizzaOptionName = "ketchup militers",
-                    PizzaOptionDescription = "Extract volume of ketchup"
+                    Description = "Number of pfeferoni",
+                    MinimalValue = 0,
+                    MaximalValue = 10,
+                    DefaultValue = 1
                 }
             };
 
-            var optionValues = new PizzaOptionValue[]
-            {
-                new PizzaOptionValue() { Id = 1, PizzaOptionId = 1, PizzaOptionValueName = "Small"},
-                new PizzaOptionValue() { Id = 2, PizzaOptionId = 1, PizzaOptionValueName = "Medium"},
-                new PizzaOptionValue() { Id = 3, PizzaOptionId = 1, PizzaOptionValueName = "Large"},
-                new PizzaOptionValue() { Id = 4, PizzaOptionId = 2, PizzaOptionValueName = "1"},
-                new PizzaOptionValue() { Id = 5, PizzaOptionId = 2, PizzaOptionValueName = "2"},
-                new PizzaOptionValue() { Id = 6, PizzaOptionId = 2, PizzaOptionValueName = "3"},
-                new PizzaOptionValue() { Id = 7, PizzaOptionId = 3, PizzaOptionValueName = "Yes"},
-                new PizzaOptionValue() { Id = 8, PizzaOptionId = 3, PizzaOptionValueName = "No"},
-                new PizzaOptionValue() { Id = 9, PizzaOptionId = 4, PizzaOptionValueName = "Volume"},
-            };
-
-            modelBuilder.Entity<PizzaOption>().HasData(options);
-            modelBuilder.Entity<PizzaOptionValue>().HasData(optionValues);
+            
         }
 
     }

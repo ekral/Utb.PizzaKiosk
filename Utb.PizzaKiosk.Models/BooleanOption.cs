@@ -8,7 +8,6 @@ namespace Utb.PizzaKiosk.Models
 {
     public class BooleanOption : PizzaOption
     {
-        public bool IsSelected { get; set; }
         public bool DefaultValue { get; set; }
     }
 }

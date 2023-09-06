@@ -9,6 +9,6 @@ namespace Utb.PizzaKiosk.Models
     public class StringOptions : PizzaOption
     {
         public required List<string> Options { get; set; }
-        public required string DefaultValueIndex { get; set; }
+        public required int DefaultValueIndex { get; set; }
     }
 }
