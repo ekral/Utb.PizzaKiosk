@@ -9,7 +9,7 @@ namespace Utb.PizzaKiosk.Models
 {
     public class StringOptions : PizzaConfigurationOption
     {
-        public required List<string> Options { get; set; }
+        public required string[] Options { get; set; }
         public required int DefaultValueIndex { get; set; }
         public bool IsDefault(string value) => true;
 

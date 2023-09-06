@@ -33,7 +33,7 @@ namespace Utb.PizzaKiosk.Models
             {
                 PizzaConfigurationOptionId = 1,
                 Description = "Pizza size",
-                Options = new List<string>() { "Small", "Medium", "Large" },
+                Options = new string[] { "Small", "Medium", "Large" },
                 DefaultValueIndex = 1
             };
 
