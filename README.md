@@ -207,16 +207,18 @@ classDiagram
       +Description: string
    }
 
+    class StringOptions{
+      +Options : List~string~
+      +DefaultValueIndex : int
+   }
+
    class BooleanOption {
       +DefaultValue : int
    }
-   
-   class ListOption{
-      +OptionList : List~string~
-      +DefaultValue : string
-   }
 
-   class NumericOption{
+   class QuantityOption{
+      +MinimalValue : int
+      +MaximalValue : int
       +DefaultValue : int
    }
 
@@ -224,6 +226,7 @@ classDiagram
       +Value : bool
       +Option : BoleanOption
    }
+
    
    class ListValue{
       +Value : List~string~
@@ -235,14 +238,14 @@ classDiagram
       +Option : NumericOption
    }
 
-   class ConfigurationValue{
+   class SelectedValue{
       <<TaggedUnion>>
       IsDefault()
    }
 
    class PizzaConfiguration{
       +Pizza : Pizza
-      +ConfigurationValues: List~ConfigurationValue~
+      +ConfigurationValues: List~SelectedValue~
    }
 
    note for Menu "Menu won't be displayed if it has no menu items."
@@ -263,7 +266,7 @@ classDiagram
    PizzaSelection "1" --> "1" Pizza
    Pizza "1" <-- "1" PizzaConfiguration
    PizzaSelection "*" --> "*" PizzaOption
-   PizzaConfiguration --> ConfigurationValue
+   PizzaConfiguration --> SelectedValue
    Menu "1"--> "*" PizzaSelection
    KioskSession "1" --> "1" Menu
    KioskSession "1" --> "1" PizzaConfiguration
@@ -272,17 +275,17 @@ classDiagram
    ShopingCart "1" --> "*" PizzaConfiguration
    Order "1" --> "*" PizzaConfiguration
 
+   PizzaOption <|--StringOptions
+   SelectedValue <|--ListValue
+   %%ListValue "1" --> "1" StringOptions
+
    PizzaOption <|--BooleanOption
-   ConfigurationValue <|--BooleanValue
+   SelectedValue <|--BooleanValue
    %%BooleanValue "1" --> "1" BooleanOption
 
-   PizzaOption <|--ListOption
-   ConfigurationValue <|--ListValue
-   %%ListValue "1" --> "1" ListOption
-
-   PizzaOption <|--NumericOption
-   ConfigurationValue <|--NumericValue
-   %%NumericValue "1" --> "1" NumericOption
+   PizzaOption <|--QuantityOption
+   SelectedValue <|--NumericValue
+   %%NumericValue "1" --> "1" QuantityOption
 ```
 
 ---
