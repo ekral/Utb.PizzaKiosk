@@ -10,5 +10,7 @@ namespace Utb.PizzaKiosk.Models
     {
         public required List<string> Options { get; set; }
         public required int DefaultValueIndex { get; set; }
+        public bool IsDefault(string value) => Options.IndexOf(value) == DefaultValueIndex;
+
     }
 }

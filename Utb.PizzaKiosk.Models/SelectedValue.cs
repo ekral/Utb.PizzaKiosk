@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Utb.PizzaKiosk.Models
 {
-    public class BooleanOption : PizzaOption
+    public abstract class SelectedValue
     {
-        public bool DefaultValue { get; set; }
-        public bool IsDefault(bool value) => value == DefaultValue;
+        public int Id { get; set; }
     }
 }

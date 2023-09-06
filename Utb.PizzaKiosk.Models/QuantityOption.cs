@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace Utb.PizzaKiosk.Models
 {
-    class QuantityOption : PizzaOption
+    public class QuantityOption : PizzaOption
     {
         public required int DefaultValue { get; set; }
         public required int MinimalValue { get; set; }
         public required int MaximalValue { get; set; }
+
+        public bool IsDefault(int value) => value == MinimalValue;
 
     }
 }
