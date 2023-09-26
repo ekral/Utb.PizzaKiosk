@@ -261,6 +261,7 @@ classDiagram
    class Pizza {
       +Name : string
       +Description : string
+      +Price : double
    }
 
    PizzaSelection "1" --> "1" Pizza
