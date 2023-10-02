@@ -288,6 +288,9 @@ classDiagram
    SelectedValue <|--NumericValue
    %%NumericValue "1" --> "1" QuantityOption
 ```
+#### Implementation notes
+
+- [Saving Collections Of Primitives In Entity Framework Core](https://www.conradakunga.com/blog/saving-collections-of-primitives-in-entity-framework-core/)
 
 ---
 ## Acknowledgments 

@@ -7,9 +7,11 @@ using System.Threading.Tasks;
 
 namespace Utb.PizzaKiosk.Models
 {
+    // https://www.conradakunga.com/blog/saving-collections-of-primitives-in-entity-framework-core/
+
     public class StringOptions : PizzaConfigurationOption
     {
-        public required string[] Options { get; set; }
+        public required ICollection<string> Options { get; set; }
         public required int DefaultValueIndex { get; set; }
         public bool IsDefault(string value) => true;
 
