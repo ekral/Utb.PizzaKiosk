@@ -290,7 +290,7 @@ classDiagram
 ```
 #### Implementation notes
 
-- [Saving Collections Of Primitives In Entity Framework Core](https://www.conradakunga.com/blog/saving-collections-of-primitives-in-entity-framework-core/)
+- [Value Conversions EF Core](https://learn.microsoft.com/en-us/ef/core/modeling/value-conversions?tabs=data-annotations)
 
 ---
 ## Acknowledgments 
