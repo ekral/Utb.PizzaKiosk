@@ -1,10 +1,13 @@
 ﻿using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Utb.PizzaKiosk.Models
@@ -15,7 +18,7 @@ namespace Utb.PizzaKiosk.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var folder = Environment.SpecialFolder.LocalApplicationData;
+            var folder = Environment.SpecialFolder.MyDocuments;
             var folderPath = Environment.GetFolderPath(folder);
             string filePath = Path.Join(folderPath, "pizzaKiosk.db");
 
@@ -73,11 +76,18 @@ namespace Utb.PizzaKiosk.Models
                 QuantityOptionId = 3,
                 Quantity = 5,
             };
-         
+
+           
 
             modelBuilder.Entity<PizzaConfigurationOption>().HasKey(so => so.PizzaConfigurationOptionId);
             modelBuilder.Entity<StringOptions>().HasData(option1);
-
+            modelBuilder.Entity<BooleanOption>().HasData(option2);
+            modelBuilder.Entity<QuantityOption>().HasData(option3);
+            modelBuilder.Entity<StringOptions>()
+                .Property(x => x.Options)
+                .HasConversion(
+                    options => JsonSerializer.Serialize(options, (JsonSerializerOptions)null), 
+                    jsonString => JsonSerializer.Deserialize<ICollection<string>>(jsonString, (JsonSerializerOptions)null));
         }
     }
 }
