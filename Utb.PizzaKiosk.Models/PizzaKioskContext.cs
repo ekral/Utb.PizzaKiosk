@@ -77,8 +77,6 @@ namespace Utb.PizzaKiosk.Models
                 Quantity = 5,
             };
 
-           
-
             modelBuilder.Entity<PizzaConfigurationOption>().HasKey(so => so.PizzaConfigurationOptionId);
             modelBuilder.Entity<StringOptions>().HasData(option1);
             modelBuilder.Entity<BooleanOption>().HasData(option2);
