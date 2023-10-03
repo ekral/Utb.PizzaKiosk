@@ -213,7 +213,7 @@ classDiagram
    }
 
    class BooleanOption {
-      +DefaultValue : int
+      +DefaultValue : bool
    }
 
    class QuantityOption{
