@@ -189,7 +189,7 @@ classDiagram
       +SessionMenu : Menu
    }
 
-
+   note for Order "In EF, immutability of a collection can be achieved using ICollection instead of List."
    class Order{
       +OrderId
       +Status : OrderStatusType
