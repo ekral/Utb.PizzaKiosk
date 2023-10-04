@@ -147,11 +147,11 @@ TODO: Decide where to put desktop application (maybe design). Check sentences in
    - Size: Small, Medium (default), Large.
    - Cheese type: Mozzarella (default), Parmesan, Vegetarian.
 - Boolean options: 
-   - Pineaple (no/yes), default: no.
-   - Garlic Powder (no/yes), default: no.
-   - Extra Sauce (no/yes), default: no
+   - Pineaple: no (default) / yes.
+   - Garlic Powder: no (default) / yes.
+   - Extra Sauce: no (default) / yes.
 - Numeric options:
-   -  Number of Artichoke Hearts, minimum: 0, maximum: 10, default: 5
+   -  Number of Artichoke Hearts: minimum: 0, maximum: 10, default: 5
    -  Number of Jalapeños, minimum: 0, maximum: 10, default: 3
 
 ### Architecture and Design
