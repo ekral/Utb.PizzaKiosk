@@ -202,7 +202,8 @@ classDiagram
       << Immutable >> +CartPizzas: List~PizzaConfiguration~
    }
 
-   note for PizzaOption "Represents available pizza options for a customer, which may include pizza size (Small, Medium, Large), vegetarian cheese (True, False), and the number of artichoke hearts (1 to 10)"
+   note for PizzaOption "Represents available pizza options for a customer,
+which may include pizza size (Small, Medium, Large), vegetarian cheese (True, False), and the number of artichoke hearts (1 to 10)"
    class PizzaOption{
       <<TaggedUnion>>
       +Description: string
