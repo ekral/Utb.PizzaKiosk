@@ -141,14 +141,18 @@ TODO: Decide where to put desktop application (maybe design). Check sentences in
 
 ### Data Requirements
 
-TODO: complete this.
-
 - A kiosk session: state:  state: ready, inuse, , Dine-in, takeout
 - The pizza: Name: PEPPERONI PIZZA, Description: tomato base shredded mozzarella
-- Size options: 
-- Additional topping options:
-   - Cheese (no/yes), default: yes,
-   - Pepperoni, Pineaple
+- List options:
+   - Size: Small, Medium (default), Large.
+   - Cheese type: Mozzarella (default), Parmesan, Vegetarian.
+- Boolean options: 
+   - Pineaple (no/yes), default: no.
+   - Garlic Powder (no/yes), default: no.
+   - Extra Sauce (no/yes), default: no
+- Numeric options:
+   -  Number of Artichoke Hearts, minimum: 0, maximum: 10, default: 5
+   -  Number of Jalapeños, minimum: 0, maximum: 10, default: 3
 
 ### Architecture and Design
 
