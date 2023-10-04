@@ -145,6 +145,10 @@ TODO: complete this.
 
 - A kiosk session: state:  state: ready, inuse, , Dine-in, takeout
 - The pizza: Name: PEPPERONI PIZZA, Description: tomato base shredded mozzarella
+- Size options: 
+- Additional topping options:
+   - Cheese (no/yes), default: yes,
+   - Pepperoni, Pineaple
 
 ### Architecture and Design
 
