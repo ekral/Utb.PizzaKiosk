@@ -205,7 +205,7 @@ classDiagram
    note for PizzaOption "Represents available pizza options with default value for a customer,
    which may include pizza size (Small, Medium, Large), default: Medium
    vegetarian cheese (true, false) default: false,
-   and the number of artichoke hearts (form minimum: 0 to maximum: 10), default: 5"
+   and the number of artichoke hearts (form minimum: 0 to maximum: 10), default: 5."
    class PizzaOption{
       <<TaggedUnion>>
       +Description: string
@@ -246,7 +246,7 @@ classDiagram
    note for PizzaOption "Represents selected pizza options by a customer,
    such as pizza size (Small),
    vegetarian cheese (false),
-   and the number of artichoke hearts (0).
+   and the number of artichoke hearts (0)."
    class SelectedValue{
       <<TaggedUnion>>
       IsDefault()
