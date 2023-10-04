@@ -243,7 +243,7 @@ classDiagram
       +Option : NumericOption
    }
 
-   note for PizzaOption "Represents selected pizza options by a customer,
+   note for SelectedValue "Represents selected pizza options by a customer,
    such as pizza size (Small),
    vegetarian cheese (false),
    and the number of artichoke hearts (0)."
