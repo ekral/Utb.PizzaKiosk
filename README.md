@@ -141,7 +141,9 @@ TODO: Decide where to put desktop application (maybe design). Check sentences in
 
 ### Data Requirements
 
-- A kiosk session: state:  state: ready, inuse, , Dine-in, takeout
+- A kiosk session:
+   - States: ready, inuse.
+   - Fulfillment options: Dine-in, Takeout, Delivery
 - The pizza: Name: PEPPERONI PIZZA, Description: tomato base shredded mozzarella
 - List options:
    - Size: Small, Medium (default), Large.
