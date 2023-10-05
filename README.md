@@ -142,11 +142,13 @@ A kiosk session:
 - States: ready, inuse.
 - Fulfillment options: Dine-in, Takeout, Delivery.
 
-The pizza example:
+// TODO rewrite according to UML diagram types
+
+The pizza description example:
 - Name: PEPPERONI PIZZA,
 - Description: Tomato base shredded mozzarella.
 
-Pizza's selection:
+Pizza's selection example:
 - List options:
    - Size: Small, Medium (default), Large.
    - Cheese type: Mozzarella (default), Parmesan, Vegetarian.
@@ -158,8 +160,10 @@ Pizza's selection:
    -  Number of Artichoke Hearts: minimum: 0, maximum: 10, default: 5
    -  Number of Jalapeños, minimum: 0, maximum: 10, default: 3
 
-pizza’s configuration
-TODO
+The pizza’s configuration choosen by the customer:
+- List values 
+- Bolean values
+- Numeric values
 
 ### Architecture and Design
 
