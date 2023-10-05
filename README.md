@@ -1,5 +1,7 @@
 # Utb.PizzaKiosk
 
+"This repository has been moved to a new location. Please visit [https://github.com/ekral/FAI/tree/master/AF/src/Utb.PizzaKiosk] for the latest updates."
+
 Pizzeria Self-Service Kiosk - Student project for AP3AF and AK3AF courses.
 
 ## Learning Objectives
