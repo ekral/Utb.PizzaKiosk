@@ -309,7 +309,9 @@ classDiagram
 ```
 #### Implementation notes
 
+- [Getting Started with EF Core](https://learn.microsoft.com/en-us/ef/core/modeling/inheritance)
 - [Value Conversions EF Core](https://learn.microsoft.com/en-us/ef/core/modeling/value-conversions?tabs=data-annotations)
+- [EF Inheritance](https://learn.microsoft.com/en-us/ef/core/modeling/inheritance)
 
 ---
 ## Acknowledgments 
