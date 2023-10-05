@@ -142,7 +142,7 @@ A kiosk session:
 - States: ready, inuse.
 - Fulfillment options: Dine-in, Takeout, Delivery.
 
-The pizza:
+The pizza example:
 - Name: PEPPERONI PIZZA,
 - Description: Tomato base shredded mozzarella.
 
